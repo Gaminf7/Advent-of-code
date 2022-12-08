@@ -1,4 +1,4 @@
-elves = r'C:\Users\Aisyah\Desktop\day2.txt'
+elves = r'day2.txt'
 
 sorted_elves = []
 
