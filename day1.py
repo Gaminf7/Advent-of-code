@@ -1,8 +1,9 @@
-sorted_elves = {}
-elves = r'input.txt'
+sorted_elves = []
+elves = r'C:\Users\Aisyah\Desktop\input.txt'
 sum_calory = 0
 elf_num = 0
 elves_into_list = []
+top_tree_calory = 0
 with open(elves, 'r+') as elf:
     lines = elf.readlines()
     for i in range(0, len(lines)):
@@ -16,18 +17,13 @@ for calory in elves_into_list:
         calory = int(calory)
         sum_calory += calory
     else:
-        elf_num += 1
-        sorted_elves[str(elf_num)] = sum_calory
+        sorted_elves.append(sum_calory)
         sum_calory = 0
 
-def find_most():
-    elf_number = ''
-    highest_value = 0
-    for keys in sorted_elves:
-        if sorted_elves[keys] > highest_value:
-            highest_value = sorted_elves[keys]
-            elf_number = keys
-    return elf_number, highest_value
-
-
-print(find_most())
+sorted_elves = sorted(sorted_elves, reverse=True)
+for i in range (0,3):
+    top_tree_calory += sorted_elves[i]
+    
+   
+print(f"Highest Elf Calory: {sorted_elves[0]}")
+print(f"Highest Top Three Calories: {top_tree_calory}")
