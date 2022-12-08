@@ -1,5 +1,5 @@
 sorted_elves = []
-elves = r'C:\Users\Aisyah\Desktop\input.txt'
+elves = r'input.txt'
 sum_calory = 0
 elf_num = 0
 elves_into_list = []
